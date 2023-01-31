@@ -1,0 +1,102 @@
+<!--
+Author:     Bernhard Huber
+Version:    1.0
+Date:       17.11.2022
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MyStyling.css">
+    <script src="Register.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return submitForm(this)">
+        <div class="purpleBackground alignCenter">
+            <img class="logo" src="Recource/peta.jpg" alt="Liebherr-Logo">
+        </div>
+
+        <div class="productWindow mt">
+            <div>
+                <h2>Konto</h2>
+                <hr>
+            </div>
+
+            <div class="alignCenter inputWidth">
+                <label for="firstname">Vorname:</label>
+                <input type="text" id="firstname" placeholder="Max" required autofocus/> <br>
+        
+                <label for="lastname">Nachname:</label>
+                <input type="text" id="lastname" placeholder="Mustermann" required/> <br>
+        
+                <label for="birthdate">Geburtstag:</label>
+                <input type="date" id="birthdate" required/> <br>
+        
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" placeholder="max.mustermann@muster.com" required/> <br>
+        
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" pattern=".{8,}" title="Min. 8 Zeichen!" required> <br>
+        
+                <label for="repeatPassword">Passwort wiederholen:</label>
+                <input type="password" id="repeatPassword" required>
+            </div>
+        </div>
+
+        <div class="productWindow">
+            <div>
+                <h2>Adresse</h2>
+                <hr>
+            </div>
+
+            <div class="alignCenter inputWidth">
+                <label for="streat">Strasse:</label>
+                <input type="text" id="streat" placeholder="Musterstraße 187"/> <br>
+        
+                <label for="city">Wohnort:</label>
+                <input type="text" id="city" placeholder="Wohnort"/> <br>
+        
+                <label for="zipCode">PLZ:</label>
+                <input type="number" id="zipCode" placeholder="5500" /> <br>
+        
+                <label for="state">Bundesland:</label>
+                <select name="state" id="state">
+                    <option value="" hidden disabled selected>Auswählen</option>
+                    <option value="Salzburg">Salzburg</option>
+                    <option value="Vienna">Wien</option>
+                    <option value="Klagenfurt">Klagenfurt</option>
+                    <option value="Tirol">Tirol</option>
+                    <option value="Upperaustria">Oberösterreich</option>
+                    <option value="Loweraustria">Niederösterreich</option>
+                    <option value="Vorarlberg">Vorarlberg</option>
+                    <option value="Styr">Steiermark</option>
+                </select> <br>
+        
+                <label for="phonenumber">Telefon:</label>
+                <input type="text" id="phonenumber" placeholder="0664 1234567"> <br>
+            </div>
+        </div>
+
+        <div class="productWindow">
+            <div>
+                <h2>Datei Hochladen</h2>
+                <hr>
+            </div>
+
+            <div class="alignCenter">
+                <label for="fileUpload">Datei auswählen:</label>
+                <input type="file" id="fileUpload">
+            </div>
+        </div>
+
+        <div class="alignCenter mt">
+            <button class="btn mr" type="submit" id="submitBtn">Speichern</button>
+            <button class="btn" type="reset" id="reloadBtn">Zurücksetzen</button>
+        </div>
+    </form>
+</body>
+</html>
